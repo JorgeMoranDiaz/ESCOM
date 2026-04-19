@@ -226,3 +226,6 @@ Este Makefile permite:
 - ejecutar el programa fácilmente,
 - eliminar archivos generados,
 - recompilar todo desde cero.
+
+## Ejemplo completo
+![ejemplo de ejecucion de makefile](img/ejemplo.png) 
