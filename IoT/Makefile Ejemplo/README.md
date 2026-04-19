@@ -28,4 +28,16 @@ Creación, análisis y ejecución de un makefile para comprender sus funcionalid
    Hola desde un ejemplo basico de Makefile.
    Este programa fue compilado y ejecutado con make.
    ```
-7. Con lo anterior veremos que en el directorio se habrán creado el archivo .o y el ejecutable
+ **Con lo anterior veremos que en el directorio se habrán creado el archivo .o y el ejecutable**
+
+ ### Extra
+   - Para obtener ayuda sobre las demas opciones disponibles utilizar **help** 
+   Ejemplo:
+   ```bash
+   giorgimd@Ubuntu:~/Documents/IoT/Makefile$ make help
+   Objetivos disponibles:
+     make         -> compila el programa
+     make run     -> compila y ejecuta
+     make clean   -> elimina archivos generados
+     make rebuild -> limpia y vuelve a compilar
+   ```
