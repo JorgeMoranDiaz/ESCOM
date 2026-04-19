@@ -17,4 +17,5 @@ Creación, análisis y ejecución de un makefile comprender sus funcionalidades,
   6. Ejecutar el programa con **./nombre**
      - Ejemplo: ```giorgimd@Ubuntu:~/Documents/IoT/Makefile$ ./hola
                  Hola desde un ejemplo basico de Makefile.
-                 Este programa fue compilado y ejecutado con make.```
+                 Este programa fue compilado y ejecutado con make.
+                 ```
