@@ -10,10 +10,16 @@ Creación, análisis y ejecución de un makefile para comprender sus funcionalid
    - **main.c**
 3. Abrir la terminal de comandos.
 4. Moverse al directorio donde se guardaron los archivos con **cd**.
-   - Ejemplo: `giorgimd@Ubuntu:~$ cd /Documents/IoT/Makefile`
+
+   Ejemplo:
+
+   ```bash
+   giorgimd@Ubuntu:~$ cd /Documents/IoT/Makefile
+   ```
+
 5. Compilar el codigo en C con **make** y deben aparecer los comandos que ejecutó `make`.
 
-   **Ejemplo:**
+   Ejemplo:
 
    ```bash
    giorgimd@Ubuntu:~/Documents/IoT/Makefile$ make
@@ -23,7 +29,7 @@ Creación, análisis y ejecución de un makefile para comprender sus funcionalid
 
 6. Ejecutar el programa con **./nombre**.
 
-   **Ejemplo:**
+   Ejemplo:
 
    ```bash
    giorgimd@Ubuntu:~/Documents/IoT/Makefile$ ./hola
