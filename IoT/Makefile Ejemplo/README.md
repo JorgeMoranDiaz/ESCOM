@@ -11,11 +11,16 @@ Creación, análisis y ejecución de un makefile comprender sus funcionalidades,
   4. Moverse al directorio donde se guardaron los archivos con **cd**
      - Ejemplo: `giorgimd@Ubuntu:~$ cd /Documents/IoT/Makefile`
   5. Compilar el codigo en C con **make** y deben de aparecer los comandos que ejecutó make
-     - Ejemplo: ```giorgimd@Ubuntu:~/Documents/IoT/Makefile$ make,
+     - Ejemplo:
+               ```bash
+                 giorgimd@Ubuntu:~/Documents/IoT/Makefile$ make,
                  gcc -Wall -Wextra -O2 -c main.c -o main.o
-                 gcc -Wall -Wextra -O2 main.o -o hola```
+                 gcc -Wall -Wextra -O2 main.o -o hola
+                 ```
   6. Ejecutar el programa con **./nombre**
-     - Ejemplo: ```giorgimd@Ubuntu:~/Documents/IoT/Makefile$ ./hola
+     - Ejemplo:
+                 ```bash
+                 giorgimd@Ubuntu:~/Documents/IoT/Makefile$ ./hola
                  Hola desde un ejemplo basico de Makefile.
                  Este programa fue compilado y ejecutado con make.
                  ```
