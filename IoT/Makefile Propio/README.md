@@ -450,3 +450,60 @@ Este proyecto permite:
 
 ## Resultados obtenidos
 ![ejemplo de ejecucion de makefile](img/ejecucionpropio.png)
+## Explicación de los resultados obtenidos
+
+Al ejecutar el comando `make help`, el programa mostró correctamente el menú de ayuda definido en el Makefile. Esto confirma que la regla `help` funciona y que los comandos disponibles del proyecto son:
+- `make`: compila el programa
+- `make run`: compila y ejecuta
+- `make clean`: elimina archivos generados
+- `make rebuild`: limpia y vuelve a compilar
+
+Después, al ejecutar `make run`, ocurrieron tres cosas de forma automática:
+1. Se compiló el archivo fuente `calculadora_ip.c`.
+2. Se generó el archivo objeto `calculadora_ip.o`.
+3. Se creó y ejecutó el programa final `analizador_ips`.
+
+Los comandos mostrados en terminal:
+
+```bash
+gcc -Wall -Wextra -O2 -c calculadora_ip.c -o calculadora_ip.o
+gcc -Wall -Wextra -O2 calculadora_ip.o -o analizador_ips
+./analizador_ips
+```
+
+indican que la compilación fue exitosa y que el ejecutable se creó sin errores.
+
+### Análisis de las IP mostradas en la ejecución
+
+#### IP: `112.14.0.0`
+El programa identificó esta dirección como **Clase A**, porque su primer octeto se encuentra dentro del rango correspondiente a esa clase.  
+La **IP de red** calculada fue `112.0.0.0`, mientras que la **IP de broadcast** fue `112.255.255.255`.  
+El programa la clasificó como **Tipo: Host**, ya que no coincide exactamente ni con la dirección de red ni con la de broadcast.  
+También calculó el rango válido de hosts para esa red, que va de `112.0.0.1` hasta `112.255.255.254`.
+
+#### IP: `141.25.0.0`
+Esta dirección fue reconocida como **Clase B**.  
+La **IP de red** resultó ser `141.25.0.0` y la **IP de broadcast** fue `141.25.255.255`.  
+En este caso, el programa la clasificó como **Tipo: Red**, porque la dirección analizada coincide exactamente con la dirección de red calculada.  
+El rango de hosts válidos va de `141.25.0.1` hasta `141.25.255.254`.
+
+#### IP: `192.14.1.100`
+Esta dirección fue identificada como **Clase C**.  
+La **IP de red** calculada fue `192.14.1.0` y la **IP de broadcast** fue `192.14.1.255`.  
+El programa la clasificó como **Tipo: Host**, porque la IP no coincide ni con la dirección de red ni con la de broadcast.  
+El rango válido de hosts va de `192.14.1.1` hasta `192.14.1.254`.
+
+#### IP: `200.168.10.25`
+En la salida se alcanza a observar que esta dirección también fue reconocida como **Clase C**, ya que su primer octeto pertenece al rango de esa clase.  
+Por lo tanto, el programa vuelve a aplicar una máscara correspondiente a Clase C para calcular la dirección de red, broadcast, tipo y rango de hosts.
+
+### Interpretación general de los resultados
+Con la ejecución realizada se comprobó que el programa:
+- lee correctamente las direcciones IP desde el archivo `ips.txt`,
+- identifica la clase de cada dirección,
+- calcula la dirección de red,
+- calcula la dirección de broadcast,
+- determina si la IP es de tipo **Red**, **Broadcast** o **Host**,
+- y muestra el rango de hosts válidos para cada caso.
+
+En resumen, los resultados obtenidos demuestran que tanto el programa en C como el Makefile funcionan correctamente, ya que la compilación se realizó sin errores y el análisis de las direcciones IP produjo salidas coherentes con la lógica implementada.
