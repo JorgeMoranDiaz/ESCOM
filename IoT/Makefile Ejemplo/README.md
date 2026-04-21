@@ -227,5 +227,123 @@ Este Makefile permite:
 - eliminar archivos generados,
 - recompilar todo desde cero.
 
-## Ejemplo completo
+## Resultados Obtenidos
 ![ejemplo de ejecucion de makefile](img/ejemplo.png) 
+## Explicación de los resultados obtenidos
+
+En la ejecución mostrada se probaron correctamente las funciones principales del Makefile y del programa en C.
+
+### Compilación inicial con `make`
+Primero se ejecutó el comando:
+
+```bash
+make
+```
+
+La salida mostrada fue:
+
+```bash
+gcc -Wall -Wextra -O2 -c main.c -o main.o
+gcc -Wall -Wextra -O2 main.o -o hola
+```
+
+Esto significa que el archivo fuente `main.c` fue compilado y convertido en un archivo objeto llamado `main.o`.  
+Después, ese archivo objeto fue usado para generar el ejecutable final llamado `hola`.
+
+En otras palabras, el comando `make` sí funcionó correctamente y logró compilar el programa sin errores.
+
+### Ejecución del programa con `./hola`
+Después se ejecutó el archivo compilado con:
+
+```bash
+./hola
+```
+
+La salida fue:
+
+```bash
+Hola desde un ejemplo basico de Makefile.
+Este programa fue compilado y ejecutado con make.
+```
+
+Esto confirma que el ejecutable `hola` fue creado correctamente y que el programa en C funciona como se esperaba.
+
+### Visualización del menú de ayuda con `make help`
+Luego se ejecutó:
+
+```bash
+make help
+```
+
+La salida mostró:
+
+```bash
+Objetivos disponibles:
+  make         -> compila el programa
+  make run     -> compila y ejecuta
+  make clean   -> elimina archivos generados
+  make rebuild -> limpia y vuelve a compilar
+```
+
+Esto demuestra que la regla `help` del Makefile también funciona correctamente, ya que muestra en pantalla las opciones disponibles y la función de cada una.
+
+### Limpieza de archivos generados con `make clean`
+Después se utilizó el comando:
+
+```bash
+make clean
+```
+
+La salida fue:
+
+```bash
+rm -f main.o hola
+```
+
+Esto significa que se eliminaron los archivos generados durante la compilación, en este caso:
+- `main.o`
+- `hola`
+
+Con esto se comprueba que la regla `clean` funciona correctamente y deja el directorio limpio.
+
+### Compilación y ejecución automática con `make run`
+Posteriormente se ejecutó:
+
+```bash
+make run
+```
+
+La salida mostró nuevamente:
+
+```bash
+gcc -Wall -Wextra -O2 -c main.c -o main.o
+gcc -Wall -Wextra -O2 main.o -o hola
+./hola
+Hola desde un ejemplo basico de Makefile.
+Este programa fue compilado y ejecutado con make.
+```
+
+Esto demuestra que `make run` realiza dos acciones en un solo paso:
+1. compila el programa si es necesario,
+2. ejecuta el archivo resultante.
+
+Se comprobó así que esta regla ahorra tiempo, ya que evita escribir `make` y luego `./hola` por separado.
+
+### Reconstrucción del proyecto con `make rebuild`
+Finalmente se utilizó:
+
+```bash
+make rebuild
+```
+
+La salida fue:
+
+```bash
+rm -f main.o hola
+gcc -Wall -Wextra -O2 -c main.c -o main.o
+gcc -Wall -Wextra -O2 main.o -o hola
+```
+
+Esto indica que el comando primero eliminó los archivos generados y luego volvió a compilar el programa desde cero.
+
+A diferencia de `make run`, aquí el programa no se ejecuta al final, solamente se limpia y se recompila.
