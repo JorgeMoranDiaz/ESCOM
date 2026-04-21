@@ -448,5 +448,5 @@ Este proyecto permite:
 - determinar si la IP es de tipo red, broadcast o host,
 - mostrar el rango de hosts válidos.
 
-## Ejemplo completo
+## Resultados obtenidos
 ![ejemplo de ejecucion de makefile](img/ejecucionpropio.png)
