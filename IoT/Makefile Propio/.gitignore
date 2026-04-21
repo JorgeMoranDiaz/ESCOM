@@ -1,1 +1,18 @@
+# Archivos objeto generados por compilacion
+*.o
 
+# Ejecutable generado por el Makefile
+analizador_ips
+
+# Archivos temporales y respaldos
+*~
+*.swp
+*.swo
+
+# Archivos de configuracion del editor
+.vscode/
+.idea/
+
+# Archivos basura del sistema
+.DS_Store
+Thumbs.db
