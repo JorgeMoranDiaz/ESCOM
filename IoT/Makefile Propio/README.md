@@ -496,14 +496,3 @@ El rango válido de hosts va de `192.14.1.1` hasta `192.14.1.254`.
 #### IP: `200.168.10.25`
 En la salida se alcanza a observar que esta dirección también fue reconocida como **Clase C**, ya que su primer octeto pertenece al rango de esa clase.  
 Por lo tanto, el programa vuelve a aplicar una máscara correspondiente a Clase C para calcular la dirección de red, broadcast, tipo y rango de hosts.
-
-### Interpretación general de los resultados
-Con la ejecución realizada se comprobó que el programa:
-- lee correctamente las direcciones IP desde el archivo `ips.txt`,
-- identifica la clase de cada dirección,
-- calcula la dirección de red,
-- calcula la dirección de broadcast,
-- determina si la IP es de tipo **Red**, **Broadcast** o **Host**,
-- y muestra el rango de hosts válidos para cada caso.
-
-En resumen, los resultados obtenidos demuestran que tanto el programa en C como el Makefile funcionan correctamente, ya que la compilación se realizó sin errores y el análisis de las direcciones IP produjo salidas coherentes con la lógica implementada.
