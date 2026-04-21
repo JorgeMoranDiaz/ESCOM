@@ -36,7 +36,7 @@ Creación, análisis y ejecución de un makefile para compilar y ejecutar un pro
    ```
 **Con lo anterior veremos que en el directorio se habrán creado el archivo `.o` y el ejecutable.**
 
-![directorio con archivos creados](img/Directorio.png)
+![directorio con archivos creados](img/DirectorioPropio.png)
 
 ### Extra
 - Para obtener ayuda sobre las demas opciones disponibles utilizar **help**.  
@@ -449,4 +449,4 @@ Este proyecto permite:
 - mostrar el rango de hosts válidos.
 
 ## Ejemplo completo
-![ejemplo de ejecucion de makefile](img/ejemplo.png)
+![ejemplo de ejecucion de makefile](img/ejecucionpropio.png)
