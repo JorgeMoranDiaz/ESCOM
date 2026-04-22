@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Logs
+*.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Archivos temporales
+*~
+*.swp
+
+# Docker
+*.tar
+
+# Si no quieres subir capturas todavía, descomenta esta línea
+# img/
+
+# Si no quieres subir archivos generados por herramientas frontend
+# dist/
