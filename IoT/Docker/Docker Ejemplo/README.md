@@ -282,6 +282,6 @@ xdg-open output/jorge_set.png
 
 También se puede abrir manualmente desde el explorador de archivos dentro de la carpeta `output`.
 
-![Pagina web](img/pagina.png)
+![Imagen Generada](img/grafica.png)
 
 ---
