@@ -74,8 +74,6 @@ EXPOSE 5000
 CMD ["make", "run"]
 ~~~
 
-### Explicación breve
-
 - `FROM python:3.12-slim`: usa Python 3.12 como base
 - `WORKDIR /app`: define la carpeta de trabajo
 - `RUN ... make ...`: instala `make`
@@ -100,8 +98,6 @@ run:
 	python $(APP_FILE)
 ~~~
 
-### Explicación breve
-
 Este archivo automatiza la ejecución del proyecto.  
 Cuando Docker inicia el contenedor, ejecuta `make run`, y eso a su vez ejecuta:
 
@@ -118,8 +114,6 @@ python app.py
 ~~~txt
 Flask==3.0.3
 ~~~
-
-### Explicación breve
 
 Define la dependencia principal del proyecto: **Flask**.
 
@@ -161,8 +155,6 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ~~~
 
-### Explicación breve
-
 - `Flask`: crea el servidor web
 - `send_from_directory`: sirve archivos como HTML, CSS y JS
 - `jsonify`: devuelve respuestas JSON
@@ -171,23 +163,6 @@ if __name__ == "__main__":
 - `@app.route("/status")`: devuelve un JSON de prueba
 - `@app.route("/<path:path>")`: sirve archivos estáticos
 - `app.run(host="0.0.0.0", port=5000)`: inicia el servidor en el puerto 5000
-
----
-
-## ¿Qué hace la página?
-
-La página funciona como un sistema básico de **registro de pacientes mascotas en una veterinaria**.
-
-Permite:
-
-- Registrar pacientes
-- Guardar datos del propietario
-- Guardar correo de contacto
-- Registrar fecha de alta
-- Registrar síntomas
-- Mostrar pacientes registrados
-
----
 
 ## Construcción de la imagen
 
