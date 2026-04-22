@@ -222,17 +222,3 @@ http://localhost:5000
 
 ![Pagina web](img/pagina.png) 
 ---
-
-## Flujo general
-
-~~~text
-Docker construye la imagen
-→ Docker crea el contenedor
-→ El contenedor ejecuta make run
-→ make ejecuta python app.py
-→ Flask levanta el servidor
-→ El navegador entra a http://localhost:5000
-→ Flask entrega index.html
-→ El navegador carga CSS y JavaScript
-→ La aplicación se muestra en pantalla
-~~~
