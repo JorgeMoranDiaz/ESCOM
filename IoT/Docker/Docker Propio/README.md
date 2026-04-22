@@ -172,6 +172,8 @@ sudo docker build -t contenedor-flask-jorge .
 
 Este comando construye la imagen Docker a partir del `Dockerfile`.
 
+[Creacion de la imagen](img/imagen.png)
+
 ---
 
 ## Ejecución del contenedor
@@ -218,6 +220,7 @@ También se puede abrir escribiendo en el navegador:
 http://localhost:5000
 ~~~
 
+[Ejecucion del contenedor](img/ejecucion.png)
 ---
 
 ## Flujo general
