@@ -203,7 +203,7 @@ Para verificar la ruta de estado:
 ~~~bash
 curl http://localhost:5000/status
 ~~~
-
+[Ejecucion del contenedor](img/ejecucion.png)
 ---
 
 ## Acceso desde el navegador
@@ -220,7 +220,7 @@ También se puede abrir escribiendo en el navegador:
 http://localhost:5000
 ~~~
 
-[Ejecucion del contenedor](img/ejecucion.png)
+[Pagina web](img/pagina.png) 
 ---
 
 ## Flujo general
