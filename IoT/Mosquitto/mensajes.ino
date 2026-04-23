@@ -1,9 +1,9 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "Wokwi-GUEST";
-const char* password = "";
-const char* mqtt_server = "192.168.1.90";   // CAMBIA esto por la IP de tu Raspberry
+const char* ssid = "MiWiFi";
+const char* password = "MiContrasena";
+const char* mqtt_server = "192.168.1.90";
 const int mqtt_port = 1883;
 const char* topic = "practica/esp32";
 
@@ -12,7 +12,7 @@ PubSubClient client(espClient);
 
 void conectarWiFi() {
   Serial.println("Conectando a WiFi...");
-  WiFi.begin(ssid, password, 6);  // canal 6 para conectar más rápido en Wokwi
+  WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -29,7 +29,7 @@ void conectarMQTT() {
   while (!client.connected()) {
     Serial.print("Conectando al broker MQTT... ");
 
-    String clientId = "ESP32Sim-";
+    String clientId = "ESP32-";
     clientId += String(random(0xffff), HEX);
 
     if (client.connect(clientId.c_str())) {
