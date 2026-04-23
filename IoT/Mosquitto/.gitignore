@@ -1,0 +1,37 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+
+# VS Code
+.vscode/
+
+# Arduino IDE / compilados
+*.ino.bin
+*.elf
+*.hex
+
+# Archivos comprimidos
+*.zip
+*.rar
+*.7z
+
+# Python cache por si llegas a usar scripts
+__pycache__/
+*.pyc
+
+# Node por si accidentalmente se genera algo web
+node_modules/
+
+# Evitar subir archivos de configuración locales
+.env
+.env.*
