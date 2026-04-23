@@ -397,6 +397,6 @@ Publicando: Hola desde ESP32
 Publicando: Hola desde ESP32
 ~~~
 
-![Monitor serial de la ESP32](img/envio.png)
+![Monitor serial de la ESP32](img/enviado.png)
 
 ![Mensajes recibidos en la Raspberry Pi](img/mensajes.png)
